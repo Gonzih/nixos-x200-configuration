@@ -32,6 +32,7 @@
     enable = true;
     interfaces = [ "wlp3s0" ];
     userControlled.enable = true;
+    userControlled.group = "wheel";
   };
   # networking.networkmanager.enable = true;
 
@@ -130,6 +131,7 @@
 
     # Enable the KDE Desktop Environment.
     displayManager.slim.enable = true;
+    displayManager.desktopManagerHandlesLidAndPower = false;
     desktopManager.xfce.enable = true;
     windowManager.default = "xmonad";
     desktopManager.default = "xfce";
