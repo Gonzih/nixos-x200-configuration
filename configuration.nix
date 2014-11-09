@@ -60,21 +60,24 @@
       wget
       vim
       tmux
+      htop
+      mc
+      mosh
       zip
       unzipNLS
 
       (pkgs.lib.overrideDerivation fish (attrs: {
-        version = "2.1.1-1077-g9d7fbd2";
-        name = "fish-2.1.1-1077-g9d7fbd2";
+        version = "2.1.1-1077-g09bac97";
+        name = "fish-2.1.1-1077-g09bac97";
 
+        # Source https://build.opensuse.org/package/show/shells:fish:nightly:master/fish
         src = fetchurl {
-          url = "https://build.opensuse.org/source/shells:fish:nightly:master/fish/fish_2.1.1-1077-g9d7fbd2.orig.tar.gz?rev=d11f870e805b9ccb7c1947f96162a5e9";
-          sha256 = "e063338986076bea4ce0aaa2521be92cd5f12d8dc6769a6a1d143202b7a5ba9e";
+          url = "https://build.opensuse.org/source/shells:fish:nightly:master/fish/fish_2.1.1-1079-g09bac97.orig.tar.gz?rev=939d598d253fa5ace19e59d348854983";
+          sha256 = "9a0d70ad441746250e9b6a5860a8f84d24dc1e36b470dceb6fb78c209854187b";
         };
       }))
 
       curl
-      mc
       mutt
       offlineimap
       msmtp
