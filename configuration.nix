@@ -28,13 +28,13 @@
 
   networking.hostName = "suse-lenovo-x200"; # Define your hostname.
   networking.firewall.enable = true;
-  networking.wireless = {
-    enable = true;
-    interfaces = [ "wlp3s0" ];
-    userControlled.enable = true;
-    userControlled.group = "wheel";
-  };
-  # networking.networkmanager.enable = true;
+  # networking.wireless = {
+  #   enable = true;
+  #   interfaces = [ "wlp3s0" ];
+  #   userControlled.enable = true;
+  #   userControlled.group = "wheel";
+  # };
+  networking.networkmanager.enable = true;
 
   powerManagement = {
     enable = true;
@@ -122,7 +122,7 @@
       }))
 
       curl
-      mutt
+      #mutt-with-sidebar
       offlineimap
       msmtp
       git
@@ -131,15 +131,14 @@
       firefoxWrapper
       thunderbird
       skype
-      dropbox
-      dropbox-cli
       inconsolata
       docker
-      # networkmanagerapplet
-      wpa_supplicant_gui
+      networkmanagerapplet
+      openvpn
+      # wpa_supplicant_gui
       (with haskellPackages; [
         ghc
-        haskellPlatform
+        # haskellPlatform
         xmonadContrib
         xmonadExtras
         xmonad
@@ -147,6 +146,8 @@
         encoding
         dmenu
       ])
+
+      teamviewer9
     ];
 
     shellInit = ''
@@ -195,7 +196,7 @@
   users.extraUsers.gnzh = {
     name = "gnzh";
     group = "users";
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     uid = 1000;
     createHome = true;
     home = "/home/gnzh";
