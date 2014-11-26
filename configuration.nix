@@ -127,6 +127,7 @@
       msmtp
       git
 
+      st
       chromium
       firefoxWrapper
       thunderbird
