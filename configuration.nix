@@ -28,6 +28,8 @@
 
   networking.hostName = "suse-lenovo-x200"; # Define your hostname.
   networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8080 ];
+  networking.firewall.allowedUDPPortRanges = [ { from = 60000; to = 61000; } ];
   # networking.wireless = {
   #   enable = true;
   #   interfaces = [ "wlp3s0" ];
