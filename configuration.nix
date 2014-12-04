@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./mopidy.nix
     ];
 
   nixpkgs.config = {
@@ -199,7 +200,7 @@
   users.extraUsers.gnzh = {
     name = "gnzh";
     group = "users";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "dialout" "audio" ];
     uid = 1000;
     createHome = true;
     home = "/home/gnzh";
