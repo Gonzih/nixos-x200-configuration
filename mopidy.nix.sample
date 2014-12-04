@@ -1,0 +1,23 @@
+{ config, pkgs, ... }:
+
+{
+  services.mopidy = {
+    enable = true;
+    extensionPackages = [ pkgs.mopidy-spotify pkgs.mopidy-moped ];
+    configuration = ''
+      [local]
+      enabled = true
+      media_dir = /home/user/Music
+
+      [spotify]
+      enabled = true
+      username = username
+      password = password
+      bitrate = 320
+      timeout = 10
+    '';
+  };
+
+}
+
+# vim: ts=2:sts=2:sw=2:expandtab
