@@ -15,6 +15,8 @@
       password = password
       bitrate = 320
       timeout = 10
+      volume_normalization = false
+      cache_dir = /media/extra_storage
     '';
   };
 

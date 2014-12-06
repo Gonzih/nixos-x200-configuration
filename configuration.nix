@@ -196,6 +196,10 @@
 
   hardware.opengl.driSupport32Bit = true;
 
+  services.journald.extraConfig = ''
+    SystemMaxUse=500M
+  '';
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.gnzh = {
     name = "gnzh";
