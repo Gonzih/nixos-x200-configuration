@@ -125,7 +125,7 @@
       }))
 
       curl
-      #mutt-with-sidebar
+      mutt-with-sidebar
       offlineimap
       msmtp
       git
