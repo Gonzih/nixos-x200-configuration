@@ -129,6 +129,7 @@
       offlineimap
       msmtp
       git
+      tig
 
       st
       chromium
