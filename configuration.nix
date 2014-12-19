@@ -27,6 +27,8 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda";
 
+  time.timeZone = "Europe/Amsterdam";
+
   networking.hostName = "suse-lenovo-x200"; # Define your hostname.
   networking.firewall.enable = true;
   networking.firewall.allowedTCPPorts = [ 8080 ];
